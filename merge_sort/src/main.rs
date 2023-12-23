@@ -1,5 +1,7 @@
-mod merge_sort;
 mod random_data_loader;
+mod sort;
+
+use sort::merge_sort;
 
 fn main() {
     let mut data = random_data_loader::load();
