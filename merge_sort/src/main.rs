@@ -1,7 +1,12 @@
+mod merge_sort;
 mod random_data_loader;
 
 fn main() {
-    let data = random_data_loader::load();
+    let mut data = random_data_loader::load();
 
-    println!("{:?}", data);
+    println!("Is sorted before: {}", merge_sort::is_sorted(&data));
+
+    data = merge_sort::sort(&mut data);
+
+    println!("Is sorted after: {}", merge_sort::is_sorted(&data));
 }
